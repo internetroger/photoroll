@@ -14,9 +14,9 @@ This project will be a quick Rails-based image uploader. I am focusing on proper
 
 ## TODO
 
-- [ ] Add columns to Post to allow for public/private viewing
-- [ ] Implement login/signup
-- [x] Create basic routes (login/signup/logout, home, upload, view, delete)
+- [x] Add columns to Post to allow for public/private viewing
+- [x] Implement login/signup
+- [ ] Create basic routes (login/signup/logout, home, upload, view, delete)
 - [ ] Create unstyled views
 - [ ] Secure image storage
 - [ ] Secure image transmission/rendering
