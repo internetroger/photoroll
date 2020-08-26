@@ -3,6 +3,16 @@
 <% if current_user == @user %>
   <h3>This is my page!!!</h3>
   <h3>Here's my private stuff!</h3>
+  <%= form_with model: @post do %>
+    <%= label_tag "Select an image:" %>
+    <br>
+    <%= file_field_tag(:post :image) %>
+    <br>
+    <%= check_box_tag(:post :private) %>
+    <%= label_tag(:private, "This post is private!") %>
+    <br>
+    <%= submit_tag "Upload"%>
+  <% end %>
 <% else %>
   <h3>Here's my public stuff!</h3>
 <% end %>

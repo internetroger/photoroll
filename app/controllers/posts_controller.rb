@@ -6,11 +6,9 @@ class PostsController < ApplicationController
         @posts = Post.all
     end
 
-    def new
-
-    end
 
     def create
+        byebug
         @post = Post.create(post_params)
         @post.image.attach(params[:image])
         redirect_to @post
