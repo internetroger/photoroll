@@ -1,7 +1,11 @@
 <h1>Welcome to Photoroll!</h1>
 
 <br>
-<p>Please log in to upload/view your images.</p>
+<% if current_user %>
+    <%= link_to "Profile",  user_path(current_user.id) %>
+<% else %>
+    <p>Please log in to upload/view your images.</p>
+<% end %>
 <p>We respect your privacy! User profiles cannot be viewed by others.</p>
 
 <h3>Here are all public images:</h3>

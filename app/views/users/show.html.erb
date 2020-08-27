@@ -1,16 +1,17 @@
 <h1><%= @user.username %>'s Photoroll!</h1>
 
 <% if current_user == @user %>
-  <h3>This is my page!!!</h3>
   <h3>Here's my private stuff!</h3>
-  <%= form_with model: @post do %>
+  <%= form_for :post do %>
     <%= label_tag "Select an image:" %>
     <br>
-    <%= file_field_tag(:post :image) %>
+    <%= file_field_tag(:image) %>
     <br>
-    <%= check_box_tag(:post :private) %>
+    <%= hidden_field_tag :private, ''%>
+    <%= check_box_tag(:private, checked = true) %>
     <%= label_tag(:private, "This post is private!") %>
     <br>
+    <%= hidden_field_tag :user_id, @user.id %>
     <%= submit_tag "Upload"%>
   <% end %>
 <% else %>
