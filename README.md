@@ -18,6 +18,8 @@ This project will be a quick Rails-based image uploader. I am focusing on proper
 - [x] Implement login/signup
 - [x] Create basic routes (login/signup/logout, home, upload, view, delete)
 - [x] Create unstyled views
-- [ ] Properly store images
+- [x] Properly store images
+- [x] Filetype validation (only jpeg, jpg, and png for now)
+- [ ] Delete images
 - [ ] Secure image storage
 - [ ] Secure image transmission/rendering
