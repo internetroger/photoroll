@@ -2,7 +2,11 @@
 
 ## Shopify Backend Developer Challenge
 
-This project will be a quick Rails-based image uploader. I am focusing on proper auth and the ability to securely upload and delete images to start.  
+This project will be a quick Rails-based image uploader. I am focusing on proper auth and the ability to securely upload and delete images to start. 
+
+### Caveat Emptor!
+
+I have included some basic validations and security measures; they are by no means exhaustive. For example: passwords must be present, and they are hashed and securely stored, but I did not include checks on password strength for ease of testing. These can easily be added at a later date. Session management is done via cookies, which is a Rails default behavior. I have configured the production environment to require SSL for cookie transmission, but the development environment uses insecure transmission. Cookies expire upon logout or after 2 days. Routes have been restricted to disallow access to restricted resources via exploiting Rails path conventions. 
 
 ### Technologies
 
@@ -11,7 +15,8 @@ This project will be a quick Rails-based image uploader. I am focusing on proper
 - `file_validators` gem for checking filetypes
 - SQLite
 - Active Model has_secure_password (Bcrypt for password management)
-- Possibly some JS, not sure yet if I want to do everything in ERB or not.
+- Static code analysis via `brakeman` gem
+- Additional static code analysis via `dawnscanner` gem
 
 ## TODO
 

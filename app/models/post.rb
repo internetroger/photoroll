@@ -1,5 +1,5 @@
 class Post < ApplicationRecord
   belongs_to :user
   has_one_attached :image
-  validates :image, file_content_type: { allow: ['image/jpeg', 'image/jpg', 'image/png'] }
+  validates :image, file_content_type: { allow: ['image/jpeg', 'image/jpg', 'image/png'] } 
 end

@@ -19,7 +19,7 @@ class PostsController < ApplicationController
     end
 
     def destroy
-        @post = Post.all.find {|p| p.id == params[:post_id].to_i}
+        @post = Post.all.find {|p| p.id == params[:post_id]}
         if current_user.id == @post.user_id
             @post.destroy
             redirect_to current_user
