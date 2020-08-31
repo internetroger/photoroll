@@ -27,5 +27,4 @@ I have included some basic validations and security measures; they are by no mea
 - [x] Properly store images
 - [x] Filetype validation (only jpeg, jpg, and png for now)
 - [x] Delete images
-- [ ] Secure image storage
-- [ ] Secure image transmission/rendering
+- [x] Secure image storage

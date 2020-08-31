@@ -26,6 +26,7 @@
       <%= button_to "delete", :controller => :posts, :action => :destroy, :post_id => post.id.to_i, :method => :delete %>
     </div>
   <% end %>
+  <h3>Here's my public stuff!</h3>
   <% @public_posts.each do |post| %>
   <div>
     <p>Public</p>
