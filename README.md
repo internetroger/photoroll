@@ -28,3 +28,4 @@ I have included some basic validations and security measures; they are by no mea
 - [x] Filetype validation (only jpeg, jpg, and png for now)
 - [x] Delete images
 - [x] Secure image storage
+- [ ] **Styling**
