@@ -3,11 +3,11 @@ class PostsController < ApplicationController
 
     def index
         # need to use private flag
-        @posts = Post.all
+        @posts = Post.all.each {|post| post.private == false}
     end
 
     def create
-        byebug
+        # byebug
         @post = Post.create(post_params)
         @post.image.attach(post_params[:image])
         redirect_to @post.user
