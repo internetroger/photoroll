@@ -19,6 +19,14 @@ class PostsController < ApplicationController
     end
 
     def destroy
+        @post = Post.all.find {|p| p.id == params[:post_id].to_i}
+        if current_user.id == @post.user_id
+            @post.destroy
+            redirect_to current_user
+        else
+            flash[:error] = "Unauthorized action! Users can only delete their own posts."
+            redirect_to current_user
+        end
 
     end
 
