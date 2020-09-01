@@ -21,25 +21,28 @@
 
   <% @private_posts.each do |post| %>
     <div>
-      <p>Private</p>
-      <%= image_tag url_for(post.image) %>
+      <figure>
+        <%= image_tag url_for(post.image) %>
+        <figcaption>Private</figcaption>
+      </figure>
       <%= button_to "delete", :controller => :posts, :action => :destroy, :post_id => post.id.to_i, :method => :delete %>
     </div>
   <% end %>
   <h3>Here's my public stuff!</h3>
   <% @public_posts.each do |post| %>
-  <div>
-    <p>Public</p>
-    <%= image_tag url_for(post.image) %>
-    <%= button_to "delete", :controller => :posts, :action => :destroy, :post_id => post.id.to_i, :method => :delete %>
-  </div>
+    <figure>
+      <%= image_tag url_for(post.image) %>
+      <%= button_to "delete", :controller => :posts, :action => :destroy, :post_id => post.id.to_i, :method => :delete %>
+      <figcaption>Public</figcaption>
+    </figure>
   <% end %>
 <% else %>
   <h3>Here's my public stuff!</h3>
   <% @public_posts.each do |post| %>
-    <div>
+    <figure>
       <%= image_tag url_for(post.image) %>
-    </div>
+      <figcaption>Public</figcaption>
+    </figure>
   <% end %>
 <% end %>
 
