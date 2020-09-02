@@ -10,7 +10,7 @@ I have included some basic validations and security measures; they are by no mea
 
 ### Technologies
 
-- Rails
+- Rails 6
 - Active Storage (image storage)
 - `file_validators` gem for checking filetypes
 - SQLite

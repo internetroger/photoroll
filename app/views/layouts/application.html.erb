@@ -12,8 +12,7 @@
   <body>
     <header>
       <h1>Photoroll</h1>
-    </header>
-    <nav>
+      <nav>
       <%= button_to "Home", root_path, method: :get %>
       <% if logged_in? %>
         <%= button_to "Logout", sessions_path, method: :delete %>
@@ -21,6 +20,7 @@
         <%= button_to "Login Page", login_path, method: :get %>
       <% end %>
     </nav>
+    </header>
     <br>
     <%= yield %>
   </body>

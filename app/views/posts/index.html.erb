@@ -8,11 +8,10 @@
 <% end %>
 
 <h3>Here are all public images:</h3>
-
-<ul>
+<div class="grid-container">
     <% @posts.each do |post| %>
-        <li>
-        <%= image_tag url_for(post.image) %>
-        </li>
+        <figure class="card">
+            <%= image_tag url_for(post.image) %>
+        </figure>
     <% end %>
-</ul>
+</div>

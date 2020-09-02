@@ -20,8 +20,8 @@
   <% end %>
 
   <% @private_posts.each do |post| %>
-    <div>
-      <figure>
+    <div class="grid-container">
+      <figure class="card">
         <%= image_tag url_for(post.image) %>
         <figcaption>Private</figcaption>
       </figure>
@@ -29,20 +29,24 @@
     </div>
   <% end %>
   <h3>Here's my public stuff!</h3>
-  <% @public_posts.each do |post| %>
-    <figure>
-      <%= image_tag url_for(post.image) %>
-      <%= button_to "delete", :controller => :posts, :action => :destroy, :post_id => post.id.to_i, :method => :delete %>
-      <figcaption>Public</figcaption>
-    </figure>
-  <% end %>
+  <div class="grid-container">
+    <% @public_posts.each do |post| %>
+      <figure class="card">
+        <%= image_tag url_for(post.image) %>
+        <%= button_to "delete", :controller => :posts, :action => :destroy, :post_id => post.id.to_i, :method => :delete %>
+        <figcaption>Public</figcaption>
+      </figure>
+    <% end %>
+  </div>
 <% else %>
   <h3>Here's my public stuff!</h3>
-  <% @public_posts.each do |post| %>
-    <figure>
-      <%= image_tag url_for(post.image) %>
-      <figcaption>Public</figcaption>
-    </figure>
-  <% end %>
+  <div class="grid-container">
+    <% @public_posts.each do |post| %>
+      <figure class="card">
+        <%= image_tag url_for(post.image) %>
+        <figcaption>Public</figcaption>
+      </figure>
+    <% end %>
+  </div>
 <% end %>
 
