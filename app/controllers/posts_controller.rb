@@ -7,13 +7,16 @@ class PostsController < ApplicationController
     end
 
     def create
-        # add message to indicate failed upload
+        
         @post = Post.new(post_params)
-        if @post.save
+        # do not allow empty uploads
+        if @post.save and @post.image.attached?
             @post.image.attach(post_params[:image])
             redirect_to @post.user
         else
-            flash[:error] = "Invalid file type! Supported extensions: jpeg, jpg, png"
+            # add message to indicate failed upload 
+             post_params[:image] == nil ? flash[:error] = "Empty uploads are not allowed, please choose a valid file" : flash[:error] = "Invalid file type! Supported extensions: jpeg, jpg, png" 
+            
             redirect_to current_user
         end
     end

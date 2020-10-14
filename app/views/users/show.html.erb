@@ -22,7 +22,7 @@
   <% @private_posts.each do |post| %>
     <div class="grid-container">
       <figure class="card">
-        <%= image_tag url_for(post.image) %>
+        <%= image_tag url_for(post.image) if post.image.attached? %>
         <figcaption>Private</figcaption>
       </figure>
       <%= button_to "delete", :controller => :posts, :action => :destroy, :post_id => post.id.to_i, :method => :delete %>
@@ -32,7 +32,7 @@
   <div class="grid-container">
     <% @public_posts.each do |post| %>
       <figure class="card">
-        <%= image_tag url_for(post.image) %>
+        <%= image_tag url_for(post.image) if post.image.attached? %>
         <%= button_to "delete", :controller => :posts, :action => :destroy, :post_id => post.id.to_i, :method => :delete %>
         <figcaption>Public</figcaption>
       </figure>

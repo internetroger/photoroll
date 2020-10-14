@@ -4,6 +4,8 @@ class SessionsController < ApplicationController
       reset_session
       @user = User.find_by(username: params[:username])
       if @user && @user.authenticate(params[:password])
+        # change this; not properly implemented.
+        # session[:login] = { value: @user.id, expires: 2.days }
         session[:user_id] = @user.id
         session[:expires] = 2.days
         redirect_to @user
