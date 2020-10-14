@@ -43,3 +43,4 @@ I have included some basic validations and security measures; they are by no mea
 - [ ] **Styling**
 - [ ] Testing via RSpec
 - [ ] Update readme with installation and usage sections
+- [ ] Add error page for routes when not following happy path
