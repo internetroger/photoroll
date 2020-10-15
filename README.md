@@ -67,4 +67,4 @@ Static analysis via dawnscanner: Run `dawn .` in the root Rails directory. Resul
 - [ ] Testing via RSpec
 - [x] Update readme with installation section
 - [x] Add screenshots to readme
-- [ ] Add error page for routes when not following happy path that does not conflict with ActiveStorage
+- [x] Add error page for routes when not following happy path that does not conflict with ActiveStorage
