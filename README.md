@@ -67,4 +67,4 @@ Static analysis via dawnscanner: Run `dawn .` in the root Rails directory. Resul
 - [ ] Testing via RSpec
 - [x] Update readme with installation section
 - [x] Add screenshots to readme
-- [x] Add error page for routes when not following happy path
+- [ ] Add error page for routes when not following happy path

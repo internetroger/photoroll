@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#new"
   post "/sessions", to: "sessions#create"
   delete "/sessions", to: "sessions#destroy"
-  get '*path', to: 'errors#error_404', via: :all
+  # get '*path', to: 'errors#error_404', via: :all
+  # match '*path' => 'errors#error_404', via: :all
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
