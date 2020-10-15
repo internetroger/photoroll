@@ -34,7 +34,7 @@ Clone down the repo -> `cd ./photoroll` -> `rails db:migrate` -> `rails s` -> `l
 
 Static analysis reports via brakeman: Run `brakeman` in the root Rails directory. View results in the terminal
 
-Static analysis via dawnscanner: Run `dawn .` in the root Rails directory. Results will appear in a `dawnscanner` folder as text files.
+Static analysis via dawnscanner: Run `dawn .` in the root Rails directory. Results will appear in a `~/dawnscanner` folder as text files.
 
 ### Screenshots
 
