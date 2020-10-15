@@ -32,6 +32,10 @@ I have included some basic validations and security measures; they are by no mea
 
 Clone down the repo -> `cd ./photoroll` -> `rails db:migrate` -> `rails s` -> `localhost:3000` in your favorite browser!
 
+Static analysis reports via brakeman: Run `brakeman` in the root Rails directory. View results in the terminal
+
+Static analysis via dawnscanner: Run `dawn .` in the root Rails directory. Results will appear in a `dawnscanner` folder as text files.
+
 ### Screenshots
 
 ***Please forgive the barebones styling!***
