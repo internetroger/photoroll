@@ -16,9 +16,14 @@ class UsersController < ApplicationController
     end
 
     def show
-        @user = User.find(params[:id])
-        @public_posts = @user.posts.select {|p| !!p.is_private == false}
-        @private_posts = @user.posts.select {|p| !!p.is_private == true}
+        # find_by does not raise ActiveRecord::RecordNotFound, defaults to nil
+        @user = User.find_by(id: params[:id])
+        if @user
+            @public_posts = @user.posts.select {|p| !!p.is_private == false}
+            @private_posts = @user.posts.select {|p| !!p.is_private == true}
+        else
+            render 'errors/error_404'
+        end
     end
 
     private

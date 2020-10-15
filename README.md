@@ -63,4 +63,4 @@ Clone down the repo -> `cd ./photoroll` -> `rails db:migrate` -> `rails s` -> `l
 - [ ] Testing via RSpec
 - [x] Update readme with installation section
 - [x] Add screenshots to readme
-- [ ] Add error page for routes when not following happy path
+- [x] Add error page for routes when not following happy path
