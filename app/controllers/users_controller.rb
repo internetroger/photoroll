@@ -22,7 +22,7 @@ class UsersController < ApplicationController
             @public_posts = @user.posts.select {|p| !!p.is_private == false}
             @private_posts = @user.posts.select {|p| !!p.is_private == true}
         else
-            render 'errors/error_404'
+            render :file => 'public/404.html', :status => :not_found
         end
     end
 
