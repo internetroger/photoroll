@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: "posts#index" 
   resources :posts, only: [:create, :destroy]
   resources :users, only: [:create, :show]
-  get "/users", to: "posts#index"
+  # get "/users", to: "posts#index"
   post "/posts/:id", to: "posts#destroy"
   post "/users/:id", to: "posts#create"
   get "/signup", to: "users#new"

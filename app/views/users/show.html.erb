@@ -18,16 +18,18 @@
     <%= f.hidden_field(:user_id, :value => @user.id) %>
     <%= f.submit "Upload"%>
   <% end %>
-
-  <% @private_posts.each do |post| %>
-    <div class="grid-container">
-      <figure class="card">
-        <%= image_tag url_for(post.image) if post.image.attached? %>
-        <figcaption>Private</figcaption>
-      </figure>
-      <%= button_to "delete", :controller => :posts, :action => :destroy, :post_id => post.id.to_i, :method => :delete %>
+  <br><br>
+  <div class="grid-container">
+    <% @private_posts.each do |post| %>
+        <figure class="card">
+          <%= image_tag url_for(post.image) if post.image.attached? %>
+          <figcaption>Private</figcaption>
+        <%= button_to "delete", :controller => :posts, :action => :destroy, :post_id => post.id.to_i, :method => :delete %>
+        </figure>
+      <% end %>
     </div>
-  <% end %>
+  
+  <br>
   <h3>Here's my public stuff!</h3>
   <div class="grid-container">
     <% @public_posts.each do |post| %>

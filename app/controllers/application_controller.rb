@@ -5,8 +5,6 @@ class ApplicationController < ActionController::Base
     def current_user
         if session[:user_id] and session[:expires_at] > Time.now
             @user = User.find(session[:user_id])
-        else
-            reset_session
         end
     end
 
