@@ -16,7 +16,7 @@ I have included some basic validations and security measures; they are by no mea
 - Public/private image designation
 - File type validation to prevent malicious uploads
 - Private images are only viewable by the user who uploaded them.
-- 
+- Automatic session expiration
 
 ### Technologies
 
@@ -40,7 +40,9 @@ I have included some basic validations and security measures; they are by no mea
 - [x] Filetype validation (only jpeg, jpg, and png for now)
 - [x] Delete images
 - [x] Secure image storage
+- [x] Session expiration
 - [ ] **Styling**
 - [ ] Testing via RSpec
 - [ ] Update readme with installation and usage sections
+- [ ] Add screenshots to readme
 - [ ] Add error page for routes when not following happy path
