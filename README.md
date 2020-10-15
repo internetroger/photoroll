@@ -39,10 +39,10 @@ I have included some basic validations and security measures; they are by no mea
 ![Login](/screenshots/login.png)
 
 **Profile View**
-![Profile View](screenshots/profile\ view.png)
+![Profile View](screenshots/profile_view.png)
 
 **Other User View**
-![Other User View](screenshots/other\ user\ view.png)
+![Other User View](screenshots/other_user_view.png)
 
 ## TODO
 
