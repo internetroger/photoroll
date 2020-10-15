@@ -28,6 +28,10 @@ I have included some basic validations and security measures; they are by no mea
 - Static code analysis via `brakeman` gem
 - Additional static code analysis via `dawnscanner` gem
 
+### Environment setup
+
+Clone down the repo -> `cd ./photoroll` -> `rails db:migrate` -> `rails s` -> `localhost:3000` in your favorite browser!
+
 ### Screenshots
 
 ***Please forgive the barebones styling!***
@@ -57,6 +61,6 @@ I have included some basic validations and security measures; they are by no mea
 - [x] Session expiration
 - [ ] **Styling**
 - [ ] Testing via RSpec
-- [ ] Update readme with installation and usage sections
-- [ ] Add screenshots to readme
+- [x] Update readme with installation section
+- [x] Add screenshots to readme
 - [ ] Add error page for routes when not following happy path

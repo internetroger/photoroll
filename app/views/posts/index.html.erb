@@ -1,9 +1,7 @@
 <h1>Welcome to Photoroll!</h1>
 
 <br>
-<% if current_user %>
-    <%= link_to "Profile",  user_path(current_user.id) %>
-<% else %>
+<% if !logged_in? %>
     <p>Please log in to upload/view your images.</p>
 <% end %>
 
