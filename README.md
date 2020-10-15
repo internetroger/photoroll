@@ -30,6 +30,20 @@ I have included some basic validations and security measures; they are by no mea
 
 ### Screenshots
 
+***Please forgive the barebones styling!***
+
+**Homepage**
+![Homepage](/screenshots/homepage.png)
+
+**Login**
+![Login](/screenshots/login.png)
+
+**Profile View**
+![Profile View](screenshots/profile\ view.png)
+
+**Other User View**
+![Other User View](screenshots/other\ user\ view.png)
+
 ## TODO
 
 - [x] Add columns to Post to allow for public/private viewing
